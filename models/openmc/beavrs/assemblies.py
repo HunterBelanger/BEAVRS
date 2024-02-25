@@ -50,7 +50,7 @@ class Assemblies(object):
 
         # Rectangular prism around the edge of the pinlattice
         self.lattice_surfs = \
-            openmc.rectangular_prism(17*c.pinPitch, 17*c.pinPitch)
+            -openmc.model.RectangularPrism(17*c.pinPitch, 17*c.pinPitch)
 
 
     def _add_assembly_surfs(self):
@@ -58,7 +58,7 @@ class Assemblies(object):
 
         # Rectangular prism around the edge of the pinlattice
         self.assem_surfs = \
-            openmc.rectangular_prism(c.latticePitch, c.latticePitch)
+            -openmc.model.RectangularPrism(c.latticePitch, c.latticePitch)
 
 
     def _add_bpra_layouts(self):

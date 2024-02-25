@@ -49,13 +49,13 @@ class Pincells(object):
 
         # Rectangular prisms for grid spacers
         grid_surfs_tb = \
-            openmc.rectangular_prism(c.rodGridSide_tb, c.rodGridSide_tb)
+            -openmc.model.RectangularPrism(c.rodGridSide_tb, c.rodGridSide_tb)
         grid_surfs_i = \
-            openmc.rectangular_prism(c.rodGridSide_i, c.rodGridSide_i)
+            -openmc.model.RectangularPrism(c.rodGridSide_i, c.rodGridSide_i)
 
         # Rectangular prisms for lattice grid sleeves
         grid_surfs_ass = \
-            openmc.rectangular_prism(c.gridstrapSide, c.gridstrapSide)
+            -openmc.model.RectangularPrism(c.gridstrapSide, c.gridstrapSide)
 
         # Grids axial surfaces
 
